@@ -83,7 +83,7 @@ const ngzReducer = combineReducers({
         readOnly: false,
 
         // use Finnish locale as default
-        locale: LOCALES.fi,
+        // locale: LOCALES.fi,
 
         // customize which map control button to show
         mapControls: {
