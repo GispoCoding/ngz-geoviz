@@ -1,0 +1,349 @@
+[
+  {
+    "model": "datahub.map",
+    "pk": "stat_age",
+    "fields": {
+      "added": "2020-04-08T16:01:01Z",
+      "order": 6,
+      "min_zoom": 0,
+      "max_zoom": 24,
+      "image": "paavo_keskiika.png",
+      "config": "paavo_keskiika.json",
+      "read_only": false,
+      "enabled": true,
+      "details_fi": 12,
+      "details_en": 12,
+      "datasets": [],
+      "statistics": [
+        "paavo_keski_ika_stat"
+      ]
+    }
+  },
+  {
+    "model": "datahub.map",
+    "pk": "stat_density",
+    "fields": {
+      "added": "2020-04-08T16:25:28Z",
+      "order": 6,
+      "min_zoom": 0,
+      "max_zoom": 24,
+      "image": "paavo_asvlajyys.png",
+      "config": "paavo_asumisvaljyys.json",
+      "read_only": false,
+      "enabled": true,
+      "details_fi": 13,
+      "details_en": 13,
+      "datasets": [],
+      "statistics": [
+        "paavo_valjyys_stat"
+      ]
+    }
+  },
+  {
+    "model": "datahub.map",
+    "pk": "stat_income",
+    "fields": {
+      "added": "2020-04-08T16:34:30Z",
+      "order": 6,
+      "min_zoom": 0,
+      "max_zoom": 24,
+      "image": "paavo_mediaani.png",
+      "config": "paavo_mediaanitulot.json",
+      "read_only": false,
+      "enabled": true,
+      "details_fi": 14,
+      "details_en": 14,
+      "datasets": [],
+      "statistics": [
+        "paavo_mediaani_stat"
+      ]
+    }
+  },
+  {
+    "model": "datahub.map",
+    "pk": "trains",
+    "fields": {
+      "added": "2020-04-03T11:30:51Z",
+      "order": 3,
+      "min_zoom": 0,
+      "max_zoom": 24,
+      "image": "junat.png",
+      "config": "trains.json",
+      "read_only": false,
+      "enabled": true,
+      "details_fi": 3,
+      "details_en": 3,
+      "datasets": [
+        "railway_data",
+        "trains"
+      ],
+      "statistics": [
+        "trains_stat"
+      ]
+    }
+  },
+  {
+    "model": "datahub.map",
+    "pk": "vessels",
+    "fields": {
+      "added": "2020-04-03T11:37:59Z",
+      "order": 4,
+      "min_zoom": 0,
+      "max_zoom": 24,
+      "image": "laivaliikenne.png",
+      "config": "vessels_with_categories_and_satamat.json",
+      "read_only": false,
+      "enabled": true,
+      "details_fi": 4,
+      "details_en": 4,
+      "datasets": [
+        "satamat_data",
+        "vessels"
+      ],
+      "statistics": [
+        "vessel_stat"
+      ]
+    }
+  },
+  {
+    "model": "datahub.statisticsfile",
+    "pk": "paavo_keski_ika_stat",
+    "fields": {
+      "type": "bubble",
+      "label_fi": "Keski-ik\u00e4",
+      "label_en": "Average age",
+      "colorHex": "#b899ff",
+      "file": "",
+      "is_reverse": false,
+      "time_axis": false,
+      "in_popup": false,
+      "reverse_url": null,
+      "use_data": true,
+      "layer_id": "5okb0k4c",
+      "field_x": "V\u00e4kiluku",
+      "field_y": "V\u00e4est\u00f6n keski-ik\u00e4",
+      "field_r": "V\u00e4est\u00f6n keski-ik\u00e4",
+      "field_label": "nimi"
+    }
+  },
+  {
+    "model": "datahub.statisticsfile",
+    "pk": "paavo_mediaani_stat",
+    "fields": {
+      "type": "bubble",
+      "label_fi": "Mediaanitulot [\u20ac]",
+      "label_en": "Median income [\u20ac]",
+      "colorHex": "#ffed47",
+      "file": "",
+      "is_reverse": false,
+      "time_axis": false,
+      "in_popup": false,
+      "reverse_url": null,
+      "use_data": true,
+      "layer_id": "hpowwv9z9",
+      "field_x": "V\u00e4kiluku",
+      "field_y": "Asukkaiden mediaanitulot",
+      "field_r": "Asukkaiden mediaanitulot",
+      "field_label": "nimi"
+    }
+  },
+  {
+    "model": "datahub.statisticsfile",
+    "pk": "paavo_valjyys_stat",
+    "fields": {
+      "type": "bubble",
+      "label_fi": "Asuinpinta-ala / asukas [m\u00b2]",
+      "label_en": "Density Standard per capita [m\u00b2]",
+      "colorHex": "#e8feff",
+      "file": "",
+      "is_reverse": false,
+      "time_axis": false,
+      "in_popup": false,
+      "reverse_url": null,
+      "use_data": true,
+      "layer_id": "4ec7q6gqa",
+      "field_x": "V\u00e4kiluku",
+      "field_y": "Asumisv\u00e4ljyys",
+      "field_r": "Asumisv\u00e4ljyys",
+      "field_label": "nimi"
+    }
+  },
+  {
+    "model": "datahub.statisticsfile",
+    "pk": "trains_stat",
+    "fields": {
+      "type": "bar",
+      "label_fi": "Junien lukum\u00e4\u00e4r\u00e4",
+      "label_en": "Number of trains",
+      "colorHex": "#1FBAD6",
+      "file": "",
+      "is_reverse": true,
+      "time_axis": true,
+      "in_popup": false,
+      "reverse_url": "train-statistics",
+      "use_data": false,
+      "layer_id": "",
+      "field_x": "",
+      "field_y": "",
+      "field_r": "",
+      "field_label": ""
+    }
+  },
+  {
+    "model": "datahub.statisticsfile",
+    "pk": "vessel_stat",
+    "fields": {
+      "type": "bar",
+      "label_fi": "Alusten lukum\u00e4\u00e4r\u00e4",
+      "label_en": "Number of vessels",
+      "colorHex": "#1FBAD6",
+      "file": "",
+      "is_reverse": true,
+      "time_axis": true,
+      "in_popup": false,
+      "reverse_url": "vessel-statistics",
+      "use_data": false,
+      "layer_id": "",
+      "field_x": "",
+      "field_y": "",
+      "field_r": "",
+      "field_label": ""
+    }
+  },
+  {
+    "model": "datahub.dataset",
+    "pk": "railway_data",
+    "fields": {
+      "file": "rautatiet.csv",
+      "label": "Rautatiet",
+      "type": "csv"
+    }
+  },
+  {
+    "model": "datahub.dataset",
+    "pk": "satamat_data",
+    "fields": {
+      "file": "satamat.csv",
+      "label": "Satamat",
+      "type": "csv"
+    }
+  },
+  {
+    "model": "datahub.dataset",
+    "pk": "trains",
+    "fields": {
+      "file": "",
+      "label": "Trains",
+      "type": "dt"
+    }
+  },
+  {
+    "model": "datahub.dataset",
+    "pk": "vessels",
+    "fields": {
+      "file": "",
+      "label": "Vessels",
+      "type": "dt"
+    }
+  },
+  {
+    "model": "datahub.detailsfi",
+    "pk": 3,
+    "fields": {
+      "label": "Kest\u00e4v\u00e4\u00e4 liikkumista raiteilla",
+      "detail": "T\u00e4ss\u00e4 n\u00e4et aina edellisen 24 tunnin junaliikenteen Suomessa (henkil\u00f6liikenne=sininen, rahti=punainen). Erityisesti it\u00e4-l\u00e4nsi-suunnassa tapahtuva rahtiliikenne ja suuret kaupungit yhdist\u00e4v\u00e4 henkil\u00f6liikenne on kest\u00e4v\u00e4n\u00e4 liikennemuotona keskeinen ihmisten liikkumisen ja talouden toimivuuden kannalta. \r\n\r\nV\u00e4lill\u00e4 kartalla voi n\u00e4hd\u00e4 supernopeita junia. Varsinkin \u00f6isin joidenkin junien liike tuntuu puolestaan matelevan. Ne ovat kuitenkin vain virheit\u00e4 junien l\u00e4hett\u00e4m\u00e4ss\u00e4 sijaintisignaalissa. \r\n\r\nData: \r\n- [Traffic Management Finland / digitraffic.fi, lisenssi CC 4.0 BY](https://www.digitraffic.fi/).\r\n- [Raidegeometriat Maanmittauslaitoksen Maastotietokannasta 2020, lisenssi CC 4.0](https://www.maanmittauslaitos.fi/avoindata-lisenssi-cc40 )",
+      "desc": "Viimeisen 24 tunnin matkustaja- ja rahtiliikennett\u00e4 raiteilla.",
+      "dataurl": "https://www.digitraffic.fi/"
+    }
+  },
+  {
+    "model": "datahub.detailsfi",
+    "pk": 4,
+    "fields": {
+      "label": "Aamu- ja iltap\u00e4iv\u00e4ruuhkaa It\u00e4merell\u00e4",
+      "detail": "T\u00e4ss\u00e4 n\u00e4et aina edellisen 24 tunnin tilanteen ja liikkeet AIS-l\u00e4hettimill\u00e4 varustetuista laivoista ja veneist\u00e4. Laivat on v\u00e4ritetty [laivatyypin](https://help.marinetraffic.com/hc/en-us/articles/205579997-What-is-the-significance-of-the-AIS-Shiptype-number-) mukaan.\r\n\r\nJoskus laivat viuhahtavat merell\u00e4 t\u00e4ydell\u00e4 vauhdilla. N\u00e4iss\u00e4 tapauksissa on kyse virheest\u00e4 datan keruussa tai laivan signaali v\u00e4litt\u00e4\u00e4 huonosti tietoa. Huomioitava my\u00f6s on, ett\u00e4 tiedossa on vain Suomen aluevesill\u00e4 seilaavien laivojen signaalit. \r\n\r\nKartalla valkoisina rajauksina n\u00e4kyv\u00e4t Pohjoisen kasvuvy\u00f6hykkeen satamat, joiden symbolin koko on skaalattu vientivolyymin mukaan. \r\n\r\nData: [Traffic Management Finland / digitraffic.fi, lisenssi CC 4.0 BY](https://www.digitraffic.fi/).",
+      "desc": "Edelliset 24 h laivaliikennett\u00e4 It\u00e4merell\u00e4.",
+      "dataurl": "https://www.digitraffic.fi/"
+    }
+  },
+  {
+    "model": "datahub.detailsfi",
+    "pk": 12,
+    "fields": {
+      "label": "V\u00e4est\u00f6n keski-ik\u00e4",
+      "detail": "V\u00e4est\u00f6n keski-ik\u00e4 on alhaisempi keskusten l\u00e4heisyydess\u00e4. Erityisesti korkeakoulut vet\u00e4v\u00e4t nuorta v\u00e4ke\u00e4 keskuksiin. \r\n\r\nTiedot perustuvat vuoden 2018 tilastoaineistoihin. \r\n\r\nData: [Tilastokeskus, postinumeroalueittainen avoin tieto 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html).",
+      "desc": "Teemakarttoja postinumeroalueittain \u2013 v\u00e4est\u00f6n keski-ik\u00e4",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  },
+  {
+    "model": "datahub.detailsfi",
+    "pk": 13,
+    "fields": {
+      "label": "Asumisv\u00e4ljyys talouksissa",
+      "detail": "Asumisv\u00e4ljyys (m2) on se keskipinta-ala, joka saadaan, kun talouksien asuinhuoneistojen yhteispinta-ala jaetaan asukkaiden lukum\u00e4\u00e4r\u00e4ll\u00e4. Tilastokeskuksen mukaan tilavasti asutaan, jos asuntokunnassa (1-5 henkil\u00f6\u00e4) on k\u00e4yt\u00f6ss\u00e4 v\u00e4hint\u00e4\u00e4n kolme asuinhuonetta enemm\u00e4n kuin asuntokunnan henkil\u00f6it\u00e4 on. T\u00e4ss\u00e4 sinisempi alue on v\u00e4ljemmin asuttu alue eli asuntojen pinta-ala suhteessa asukkaiden m\u00e4\u00e4r\u00e4\u00e4n on suurempi. \r\n\r\nTiedot perustuvat vuoden 2018 tilastoaineistoihin. \r\n\r\nData: [Tilastokeskus, postinumeroalueittainen avoin tieto 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html).",
+      "desc": "Teemakarttoja postinumeroalueittain - asumisv\u00e4ljyys",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  },
+  {
+    "model": "datahub.detailsfi",
+    "pk": 14,
+    "fields": {
+      "label": "Mediaanitulot talouksissa",
+      "detail": "Mediaanituloilla mitattuna kaupungit ja erityisesti p\u00e4\u00e4kaupunkiseutu erottuvat t\u00e4ss\u00e4 kartassa edukseen. Kirkkaampi keltainen ilmaisee korkeampia mediaanituloja. Talouksien mediaanitulot (\u20ac) saadaan, kun kaikki taloudet asetetaan k\u00e4ytett\u00e4viss\u00e4 olevien rahatulojen mukaan suuruusj\u00e4rjestykseen. Mediaanitulo on keskimm\u00e4isen talouden tulo \r\n\r\nTiedot perustuvat vuoden 2017 tilastoaineistoihin. \r\n\r\nData: [Tilastokeskus, postinumeroalueittainen avoin tieto 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html).",
+      "desc": "Teemakarttoja postinumeroalueittain - mediaanitulot",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  },
+  {
+    "model": "datahub.detailsen",
+    "pk": 3,
+    "fields": {
+      "label": "Sustainable travelling on rails",
+      "detail": "The last 24 hours of travelling on rails. The data is divided into cargo (red) and passenger trains (blue). Especially cargo railways from east to west and passengers rails combining the bigger cities are essentials means for moving people and goods in a sustainable way.\r\n\r\nSome times there is a glitch in the matrix and you can see super fast or super slow trains travelling from station to station. They are propably errors in data signals transmitted by the trains.\r\n\r\nData: \r\n- [Traffic Management Finland / digitraffic.fi, licence CC 4.0 BY](https://www.digitraffic.fi/)\r\n- [Rail geometry from NLS-FI topographical database 2020, lisence CC 4.0](https://www.maanmittauslaitos.fi/avoindata-lisenssi-cc40 )",
+      "desc": "Last 24 hours of trains on rails divided into cargo and passenger trains.",
+      "dataurl": "https://www.digitraffic.fi/"
+    }
+  },
+  {
+    "model": "datahub.detailsen",
+    "pk": 4,
+    "fields": {
+      "label": "Morning and afternoon traffic in the Baltic Sea",
+      "detail": "The last 24 hours of sailing on the Baltic Sea can be visualized using ships and boat that have AIS-transmitting enabled. The different colors are different ship types and you can learn more about those [here](https://help.marinetraffic.com/hc/en-us/articles/205579997-What-is-the-significance-of-the-AIS-Shiptype-number-).\r\n\r\nIf you see some speedy boats in the maps, they are propably errors in the data or signals transmitted by the ships. Notice also that the dataset covers only signals retrieved from territorial waters of Finland.\r\n\r\nThe harbours of the Northern Growth Zone (here in white circles) are visualized by the amount of exported goods. \r\n\r\nData: [Traffic Management Finland / digitraffic.fi, lisence CC 4.0 BY](https://www.digitraffic.fi/).",
+      "desc": "Last 24 hours of sea faring in the Baltic Sea.",
+      "dataurl": "https://www.digitraffic.fi/"
+    }
+  },
+  {
+    "model": "datahub.detailsen",
+    "pk": 12,
+    "fields": {
+      "label": "Average age of population",
+      "detail": "Younger people tend to live near the cities. This might be due to higher education facilities that attract the younger population to move to the cities. \r\n\r\nData: [Statistics Finland, postal code area statistics 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html)",
+      "desc": "Maps with statistical data from postal code areas \u2013 average age",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  },
+  {
+    "model": "datahub.detailsen",
+    "pk": 13,
+    "fields": {
+      "label": "Density standard",
+      "detail": "Number of rooms in housing units related to the inhabitants creates a value for density standard. According to Statistics Finland, people are living spaciously if the household (1-5 persons) has at least 3 rooms more than there are people living in the household. In this map you can see the more spacious postal code areas with blue color. \r\n\r\nData: [Statistics Finland, postal code area statistics 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html)",
+      "desc": "Maps with statistical data from postal code areas \u2013 density standard",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  },
+  {
+    "model": "datahub.detailsen",
+    "pk": 14,
+    "fields": {
+      "label": "Median income in housholds",
+      "detail": "This visualization covers median income calculated into postal code areas. Bright yellow indicates higher median income. The cities and especially the capital city area can be seen as more wealthy areas in the Northern Growth Zone.\r\n\r\nData: [Statistics Finland, postal code area statistics 2020](https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html)",
+      "desc": "Maps with statistical data from postal code areas - median income",
+      "dataurl": "https://www.stat.fi/tup/paavo/paavon_aineistokuvaukset.html"
+    }
+  }
+]

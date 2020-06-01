@@ -1,0 +1,15 @@
+boto3==1.12.31
+celery==4.4.2
+Django==3.0.4
+django-cors-headers==3.2.1
+django-storages==1.9.1
+django-pandas==0.6.1
+djangorestframework==3.11.0
+djangorestframework-gis==0.15
+gunicorn==20.0.4
+paho-mqtt==1.5.0
+pandas==0.25.3
+psycopg2-binary==2.8.4
+redis==3.4.1
+requests==2.22.0
+rest-pandas==1.1.0

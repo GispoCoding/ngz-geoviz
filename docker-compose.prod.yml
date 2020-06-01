@@ -1,0 +1,54 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./ngz-geoviz
+      dockerfile: Dockerfile.prod
+      args:
+        MapboxAccessToken: add-your-token-key
+
+    command: sh -c "celery -A ngz_geoviz worker -B -l info --concurrency=3 & gunicorn ngz_geoviz.wsgi:application --bind 0.0.0.0:8000 --timeout 300"
+    volumes:
+      - static_volume:/home/app/web/static
+    expose:
+      - 8000
+    env_file:
+      - ./.env.prod
+    depends_on:
+      - db
+    links:
+      - redis
+    restart: unless-stopped
+
+  redis:
+    image: redis:5.0.8-alpine
+    container_name: ngz_redis
+    expose:
+      - 6379
+
+  db:
+    image: kartoza/postgis:12.0
+    volumes:
+      - postgres_ngz_data_prod:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.prod.db
+    restart: unless-stopped
+    healthcheck:
+      test: "exit 0"
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/home/app/web/static
+      #- /etc/letsencrypt:/etc/letsencrypt # Path to letsencrypt folder
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - web
+    restart: unless-stopped
+
+volumes:
+  postgres_ngz_data_prod:
+  static_volume:
