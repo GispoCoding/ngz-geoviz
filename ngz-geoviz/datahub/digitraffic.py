@@ -82,11 +82,16 @@ class TrainFetcher(DigitrafficFetcher):
     TRAIN_NUMBERS = "train_numbers"
     GRAPHQL_TEMPLATE = '''
     {
-        viewer {
-                getTrainsByDepartureDateUsingGET(where:\"[*trainCategory={category}]\", departure_date:\"{date}\"){
-                    trainNumber trainCategory
-                }
+      trainsByDepartureDate(departureDate: "{date}", 
+        where: {trainType: {trainCategory: {name: {equals: "{category}"}}}} 
+        ) {
+        trainNumber
+        trainType {
+          trainCategory {
+            name
+          }
         }
+      }
     }
     '''
 
@@ -105,10 +110,10 @@ class TrainFetcher(DigitrafficFetcher):
             }
             # logger.debug(f"Query string: {json.dumps(data)}")
 
-            r = requests.post(url, json=data)
+            r = requests.post(url, json=json.loads(json.dumps(data)))
             if r.ok:
-                train_data = json.loads(r.text)["data"]["viewer"]["getTrainsByDepartureDateUsingGET"]
-                train_numbers = {int(train["trainNumber"]): train["trainCategory"] for train in train_data}
+                train_data = json.loads(r.text)["data"]["trainsByDepartureDate"]
+                train_numbers = {int(train["trainNumber"]): train["trainType"]["trainCategory"]["name"] for train in train_data}
                 initial_settings[TrainFetcher.TRAIN_NUMBERS].update(train_numbers)
 
             else:

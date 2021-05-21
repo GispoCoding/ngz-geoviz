@@ -303,7 +303,7 @@ DIGITRAFFIC = {
     },
     'TRAINS': {
         'graphql_url': os.environ.get("DIGITRAFFIC_TRAINS_REST_URL",
-                                      "https://rata.digitraffic.fi/api/v1/graphql/graphiql/?"),
+                                      "https://rata.digitraffic.fi/api/v2/graphql/graphql/"),
         'train_categories': os.environ.get("DIGITRAFFIC_TRAINS_CATEGORIES", "Cargo").split(","),
         'mqtt': {
             'host': os.environ.get("DIGITRAFFIC_TRAINS_HOST"),
