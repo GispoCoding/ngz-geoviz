@@ -1,5 +1,5 @@
 boto3==1.12.31
-celery==4.4.2
+celery==5.2.2
 Django==3.1.9
 django-cors-headers==3.2.1
 django-storages==1.9.1
